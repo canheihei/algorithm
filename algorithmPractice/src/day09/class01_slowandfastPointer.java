@@ -99,8 +99,31 @@ public class class01_slowandfastPointer {
 		return head;
 	}
 
+	//打印链表
 	public static void printLinkedList(Node head){
 		Node cur = head;
+		while(cur != null){
+			System.out.print(cur.value+" ");
+			cur = cur.next;
+		}
+		System.out.println();
+	}
 
+	// 获取链表长度
+	public static int getLinkedListLength(Node head) {
+		int length = 0;
+		Node cur = head;
+		while (cur != null) {
+			length++;
+			cur = cur.next;
+		}
+		return length;
+	}
+
+	// midOrUpMidNode 的对数器
+	public static boolean isMidOrUpMidNodeCorrect(Node head,Node midOrUpMid){
+
+
+		return false;
 	}
 }
