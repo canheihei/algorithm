@@ -1,10 +1,9 @@
 package day12;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
-public class class01_EncodeNaryTreeToBinaryTree {
+public class class04_EncodeNaryTreeToBinaryTree {
 	public static class Node {
 		public int val;
 		public List<Node> children;
