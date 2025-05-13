@@ -9,6 +9,7 @@ public class class01_LevelOrderTraversal {
 		public TreeNode right;
 	}
 
+	// 层序遍历方法一
 	public static List<List<Integer>> levelOrder1(TreeNode root) {
 		List<List<Integer>> ans = new ArrayList<>();
 		if(root != null){
@@ -41,6 +42,7 @@ public class class01_LevelOrderTraversal {
 	public static int MAXN =2001;
 	public static TreeNode[] queue = new TreeNode[MAXN];
 
+	// 层序遍历方法二
 	public static List<List<Integer>>levelOrder2(TreeNode root){
 		List<List<Integer>> ans = new ArrayList<>();
 		if(root != null){

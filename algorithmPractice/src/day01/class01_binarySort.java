@@ -1,6 +1,6 @@
 package day01;
 
-public class binarySort {
+public class class01_binarySort {
 	public static void main(String[] args) {
 
 	}

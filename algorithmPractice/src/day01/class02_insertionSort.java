@@ -1,9 +1,7 @@
 package day01;
 
 
-import java.util.Collection;
-
-public class insertionSort {
+public class class02_insertionSort {
 	public static void main(String[] args) {
 		Integer[] arr = new Integer[10];
 		arr[0] = 1;
