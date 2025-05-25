@@ -1,4 +1,4 @@
-package day04;
+package algorithm04;
 
 public class class03_smallSum {
 	public static int smallSum(int[] arr){

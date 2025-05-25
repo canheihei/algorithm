@@ -1,4 +1,4 @@
-package day06;
+package algorithm06;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -6,10 +6,10 @@ import java.util.HashMap;
 
 public  class class01_MyHeap {
 	public static class MyHeap<T>{
-		private ArrayList<T> heap;
-		private HashMap<T,Integer> indexMap;
-		private int heapSize;
-		private Comparator<? super T> comparator;
+		public ArrayList<T> heap;
+		public HashMap<T,Integer> indexMap;
+		public int heapSize;
+		public Comparator<? super T> comparator;
 
 		public MyHeap(Comparator<? super T> com){
 			heap=new ArrayList<>();

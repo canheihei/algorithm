@@ -1,4 +1,4 @@
-package day01;
+package algorithm01_sort01;
 
 
 public class class02_insertionSort {

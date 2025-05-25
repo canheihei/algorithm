@@ -1,8 +1,7 @@
-package day01;
+package algorithm01_sort01;
 
 import java.util.Arrays;
 import java.util.Random;
-import java.util.concurrent.ForkJoinPool;
 
 public class class03_selectSort {
 	public static void main(String[] args) {

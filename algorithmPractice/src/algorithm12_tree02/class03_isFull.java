@@ -1,11 +1,7 @@
-package day12;
+package algorithm12_tree02;
+import algorithm00_common.TreeNode;
 
 public class class03_isFull {
-	public static class TreeNode {
-		public int val;
-		public TreeNode left;
-		public TreeNode right;
-	}
 
 	public static class Info {
 		int height;

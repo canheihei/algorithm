@@ -1,7 +1,8 @@
-package day12;
+package algorithm12_tree02;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class class04_EncodeNaryTreeToBinaryTree {
 	public static class Node {

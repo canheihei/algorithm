@@ -1,4 +1,4 @@
-package day04;
+package algorithm04;
 
 public class class02_mergeSort2 {
 	public static void mergeSort2(int[] arr){

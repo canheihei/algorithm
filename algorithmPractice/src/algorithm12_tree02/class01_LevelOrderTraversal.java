@@ -1,13 +1,11 @@
-package day12;
+package algorithm12_tree02;
 
 import java.util.*;
 
+import algorithm00_common.TreeNode;
+
+// 二叉树的层序遍历（两种方法）
 public class class01_LevelOrderTraversal {
-	public static class TreeNode {
-		public int val;
-		public TreeNode left;
-		public TreeNode right;
-	}
 
 	// 层序遍历方法一
 	public static List<List<Integer>> levelOrder1(TreeNode root) {

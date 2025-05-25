@@ -1,12 +1,7 @@
-package day03;
+package algorithm03;
 
- public class ListNode {
-     int val;
-     ListNode next;
-     ListNode() {}
-     ListNode(int val) { this.val = val; }
-     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- }
+import algorithm00_common.ListNode;
+
 class Solution {
     public ListNode deleteNode(ListNode head, int val) {
         // 处理头节点为 null 的情况 

@@ -1,12 +1,7 @@
-package day12;
+package algorithm12_tree02;
+import algorithm00_common.TreeNode;
 
 public class class08_CompletenessOfBinaryTree {
-	public static class TreeNode {
-		public int val;
-		public TreeNode left;
-		public TreeNode right;
-	}
-
 	public static int MAXN = 101;
 
 	public static TreeNode[] queue = new TreeNode[MAXN];

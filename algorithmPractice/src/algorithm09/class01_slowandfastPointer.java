@@ -1,6 +1,4 @@
-package day09;
-
-import day03.Node;
+package algorithm09;
 
 import java.util.Random;
 
