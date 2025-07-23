@@ -11,7 +11,7 @@ public class class01_printOddTimesNum2 {
 		// result2 用来存储另一个出现奇数次的数字（后面计算）
 		int result2;
 
-		// 第一次遍历：将数组所有元素异或起来，得到两个奇数次数字异或的结果
+		// 第一次遍历：将数组所有元素异或起来，得到两个奇数次数字异或的结果,偶数次的数字异或为0,0^任何数=任何数
 		for (int i = 0; i < arr.length; i++) {
 			erro ^= arr[i];
 		}
