@@ -22,21 +22,21 @@ public class class03_Coffee {
         }
     }
 
-//    public static int minTime2(int[] arr, int n, int a, int b) {
-//        PriorityQueue<Machine> heap = new PriorityQueue<Machine>(new MachineComparator());
-//        for (int i = 0; i < arr.length; i++) {
-//            heap.add(new Machine(0, arr[i]));
-//        }
-//        int[] drinks = new int[n];
-//        for (int i = 0; i < n; i++) {
-//            Machine cur = heap.poll();
-//            cur.timePoint += cur.workTime;
-//            // 第i个人喝完的时间
-//            drinks[i] = cur.timePoint;
-//            heap.add(cur);
-//        }
-//        return dp(drinks, a, b);
-//    }
+    public static int minTime2(int[] arr, int n, int a, int b) {
+        PriorityQueue<Machine> heap = new PriorityQueue<Machine>(new MachineComparator());
+        for (int i = 0; i < arr.length; i++) {
+            heap.add(new Machine(0, arr[i]));
+        }
+        int[] drinks = new int[n];
+        for (int i = 0; i < n; i++) {
+            Machine cur = heap.poll();
+            cur.timePoint += cur.workTime;
+            // 第i个人喝完的时间
+            drinks[i] = cur.timePoint;
+            heap.add(cur);
+        }
+        return bestTimeDp(drinks, a, b);
+    }
 
     public static int process(int[] drinks, int a, int b, int index, int washline) {
         if (index == drinks.length) {
@@ -52,7 +52,7 @@ public class class03_Coffee {
         return Math.min(p1, p2);
     }
 
-    public static int bestTime(int[] drinks, int wash, int air) {
+    public static int bestTimeDp(int[] drinks, int wash, int air) {
         int N = drinks.length;
         int maxFree = 0;
         for (int i = 0; i < drinks.length; i++) {
