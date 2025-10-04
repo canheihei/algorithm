@@ -1,6 +1,6 @@
 package algorithm00_otherPractice;
 
-import algorithm00_common.Category;
+import simpleDataNode.Category;
 
 import java.util.Arrays;
 import java.util.Comparator;
