@@ -42,19 +42,22 @@ public class class02_isPalindromeList {
      * @return 如果链表为回文结构返回true，否则返回false
      */
     public static boolean isPalindrome2(ListNode head) {
+        // 如果没有节点或者只有一个节点
         if (head == null || head.next != null) {
             return true;
         }
-        ListNode right = head.next;
-        ListNode cur = head;
-        while (cur.next != null && cur.next.next != null) {
-            right = right.next;
-            cur = cur.next.next;
+        // 一个以上节点
+        ListNode fast = head.next;
+        ListNode slow = head;
+        while (slow.next != null && slow.next.next != null) {
+            fast = fast.next;
+            slow = slow.next.next;
         }
+        // 对比上述方法少用一半栈空间
         Stack<ListNode> stack = new Stack<>();
-        while (right != null) {
-            stack.push(right);
-            right = right.next;
+        while (fast != null) {
+            stack.push(fast);
+            fast = fast.next;
         }
         while (!stack.isEmpty()) {
             if (head.val != stack.pop().val) {
@@ -85,6 +88,7 @@ public class class02_isPalindromeList {
             }
         }
         // 两个以上节点
+        // 先找到中间节点（奇数个），下中点（偶数个）
         ListNode slow = head;
         ListNode fast = head;
         while (fast.next != null && fast.next.next != null) {
@@ -94,15 +98,17 @@ public class class02_isPalindromeList {
         // 开始逆序右半部分
         fast = slow.next;
         slow.next = null;
-        ListNode n3;
+        // 防断节点
+        ListNode tmp;
         while (fast != null) {
-            n3 = fast.next;
+            tmp = fast.next;
             fast.next = slow;
+            // 必须先将slow指向fast，不然fast指向tmp后slow就找不到了
             slow = fast;
-            fast = n3;
+            fast = tmp;
         }
         // 逆序后比对
-        n3 = slow;
+        tmp = slow;
         fast = head;
         boolean res = true;
         while (slow != null && fast != null) {
@@ -115,12 +121,12 @@ public class class02_isPalindromeList {
         }
 
         // 复原原链表结构（也可以省略）
-        slow = n3.next;
-        n3.next = null;
+        slow = tmp.next;
+        tmp.next = null;
         while (slow != null) {
             fast = slow.next;
-            slow.next = n3;
-            n3 = slow;
+            slow.next = tmp;
+            tmp = slow;
             slow = fast;
         }
         return res;
